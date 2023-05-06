@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Joke Search";
+    @model DadJokes.Models.DadJokeViewModel<DadJokeSearchResults>;
+}
+
+<div>
+    @{
+        <h2>Search</h2>
+
+        <form method="GET" action="/jokesearch">
+            <input name="term" type="text" required />
+            <button type="submit" value="Search">Search</button>
+        </form>
+
+
+        if (Model.HasError)
+        {
+            <h4>Something went wrong</h4>
+            <p>@Model.ErrorMessage</p>
+        }
+        else
+        {
+
+            if (ViewBag.term != null)
+            {
+                <h4>You searched: @ViewBag.term</h4>
+            }
+
+            if (Model.Result != null)
+            {
+                if (Model.Result.GroupedResults.Count() == 0)
+                {
+                    <p>No results found, please enter a new term.</p>
+                }
+                else
+                {
+
+                    foreach (var group in Model.Result.GroupedResults.OrderByDescending((x => x.Key)).ToList())
+                    {
+                        <h3>
+                            @group.Key:
+                        </h3>
+
+                        foreach (var result in group)
+                        {
+                            <div>@result.Joke<br /></div><br />
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+</div>
+

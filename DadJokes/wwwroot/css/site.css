@@ -1,0 +1,70 @@
+﻿html {
+    font-size: 16px;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: rgb(15, 31, 44);
+}
+
+a {
+    color: #0f1f2c;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0.5rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Antonia H3, Georgia, serif;
+    font-weight: normal;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+main {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+
+}
+
+.content {
+    background: #0077cc;
+    color: #ffffff;
+    -webkit-box-shadow: 0 2px 25px rgba(0,0,0,.2);
+    box-shadow: 0 2px 25px rgba(0,0,0,.2);
+    padding: 40px;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    border: 0;
+    background-color: #ff7f64;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.11);
+    box-shadow: 0 1px 2px rgba(0,0,0,.11);
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 12px 49px;
+}
+
+input {
+    background-color: #fff;
+    border: 0;
+    border-radius: 3px;
+    color: #6d767e;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 13px;
+}

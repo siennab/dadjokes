@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Random Joke";
+    @model DadJokes.Models.DadJokeViewModel<DadJoke>
+}
+
+<div>
+    <h2>Random joke:</h2>
+
+    @{
+        if (Model.HasError)
+        {
+            <h4>Something went wrong</h4>
+            <p>@Model.ErrorMessage</p>
+        }
+        else
+        {
+            if (Model.Result != null)
+            {
+                @Model.Result.Joke
+            }
+            else
+            {
+                <p>No joke found, please try again later</p>
+            }
+        }
+    }
+
+</div>
+
